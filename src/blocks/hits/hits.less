@@ -1,0 +1,153 @@
+.hits {
+	background: @c-white;
+	padding-bottom: 35px;
+	position: relative;
+
+	&__title {
+		padding: 20px 0;
+		margin-left: 15px;
+	}
+}
+
+.hits__carousel {
+	overflow: hidden;
+	margin-left: 12px;
+	padding: 5px;
+		
+		&_item {
+			width: 220px;
+			padding: 30px 0;
+			width: 220px;
+			height: 275px;
+			position: relative;
+
+			&-link > img {
+				display: block;
+				margin: 0 auto;
+				max-height: 225px;
+				max-width: 150px;
+				height: auto;
+				width: auto;
+		}
+	}
+
+	& .owl-prev,
+	& .owl-next {
+		position: absolute;
+		top: 50%;
+		content: '';
+	}
+
+	& .owl-prev:before,
+	& .owl-next:before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		width: 20px;
+		height: 20px;
+		border-top: 2px solid #cecece;
+		border-left: 2px solid #cecece;
+		cursor: pointer;
+	}
+
+	& .owl-next {
+		right: 20px;
+	}
+
+	& .owl-prev {
+		left: 20px;
+	}
+
+	& .owl-next:before {
+		right: 10px;
+		transform: rotate(135deg);
+	}
+
+	& .owl-prev:before {
+		left: 10px;
+		transform: rotate(-45deg);
+	}
+}
+
+.hits__price {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	padding-bottom: 10px;
+
+	&_title {
+		text-transform: uppercase;
+		color: @c-black;
+		display: block;
+
+		& > span {
+			color: #959595;
+		}
+	}
+
+	&_price {
+		display: inline-block;
+		color: @c-roze;
+	}
+
+	&_button {
+		display: none;
+	}
+}
+
+.hits__carousel_item:hover {
+	box-shadow: 0px 0px 5px 3px #e4f1ff;
+
+		& .hits__price_button {
+			display: inline-block;
+			position: relative;
+			background-image:
+     		linear-gradient(to top right, transparent 50.5%, #fff 50.5%),
+        linear-gradient(to bottom right, transparent 50.5%, #fff 50.5%);  /* 50.5%, иначе угол будет не острый */
+		background-repeat: repeat-y, repeat-y;
+		background-position: 90px 1px, 90px 1px;  /*  начинаем не с обрезанного угла  */
+		background-size: 5px 5px, 5px 5px;
+	}
+
+	& .hits__price_title > span {
+		color: @c-black;
+	}	
+}
+
+.hits__price_button:before {
+	position: absolute;
+	content: '';
+	border: 12px solid transparent;
+	border-left: 5px solid #fff;
+	top: 0;
+	left: 0;
+}
+
+.hits__type {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 30px 40px 0 0;
+
+	&_item {
+		display: inline-block;
+		padding: 1px 10px;
+		position: relative;
+		margin: 0 5px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+}
+
+.active_btn:before{
+		content: '';
+		width: 10px;
+		height: 10px;
+		background: @c-roze;
+		top: 20px;
+		left: 50%;
+		position: absolute;
+		transform: rotate(45deg);
+		margin-left: -4px;
+	}

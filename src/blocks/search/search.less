@@ -1,0 +1,86 @@
+.search {
+	background: @c-white;
+	padding: 15px 5px;
+	box-shadow: 0px 10px 20px -10px #e2e2e2;
+	position:relative;
+	z-index: 99;
+}
+
+.delivery__item {
+	cursor: pointer;
+	font-size: 13px;
+	position: relative;
+	display: inline-block;
+	margin-right: 55px;
+	width: 145px;
+	margin-right: 20px;
+	margin-left: 65px;
+	vertical-align: top;
+	line-height: 1.6;
+
+	&:hover {
+		color: @c-roze;
+		font-weight: bold;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:first-child:before {
+		position: absolute;
+		background: url(../images/truck.png) no-repeat -10% 50%;
+		content: '';
+		top: 5px;
+		left: -60px;
+		width: 51px;
+		height: 36px;
+	}
+
+	&:nth-child(2):before,
+	&:last-child:before  {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: -60px;
+		width: 51px;
+		height: 50px;
+	}
+	&:nth-child(2):before {
+		background: url(../images/doc.png) no-repeat 80% 50%;
+	}
+
+	&:last-child:before {
+		background: url(../images/watchpict.png) no-repeat 100% 50%;
+	}
+
+	& > a {
+		text-decoration: underline;
+	}
+}
+
+.search__form {
+	position: relative;
+}
+
+.loop {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	position: absolute;
+	left: 280px;
+	top: 11px;
+	transition: transform 5s linear;
+
+	&:hover {
+		transform:rotate(10turn);
+	}
+}
+
+#search {
+	margin-top: 5px;
+	padding: 5px 10px;
+	width:280px;
+	border: 1px solid #b7c8ce;
+	border-radius: 2px;
+}

@@ -1,0 +1,53 @@
+{% set brands = [
+	{
+		"img": "./images/brand1.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand2.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand3.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand4.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand5.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand6.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand7.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand8.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand9.png",
+		"alt": "брэнды"
+	},
+	{
+		"img": "./images/brand10.png",
+		"alt": "брэнды"
+	}
+]%}
+
+<div class="brands">
+	<div class="container">
+		<div class="brands-logo">
+			{% for item in brands %}
+				<img class="brands-logo__item" src="{{item.img}}" alt="{{item.alt}}">
+			{% endfor %}
+		</div>
+		<a class="brands-link" href="./allbrands.html">Все производители</a>
+	</div>
+</div>

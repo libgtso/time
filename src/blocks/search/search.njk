@@ -1,0 +1,29 @@
+{% set delivery = [
+	{
+		"title": "Бесплатная доставка по Екатеринбургу"
+	},
+	{
+		"title": "Только оригинальные модели часов"
+	},
+	{
+		"title": "987 моделей<br> в  <a>Каталоге</a>"
+	}
+]%}
+
+<div class="search">
+	<div class="container">
+		<div class="column delivery">
+			{% for item in delivery %}
+				<div class="delivery__item">
+					{{item.title}}
+				</div>
+			{% endfor %}
+		</div>
+		<form class="column search__form" action="">
+			<input type="text" name="" id="search" placeholder="Поиск по каталогу">
+			<div class="loop">
+				<img class="loop_click" src="./images/loop.png" alt="">
+			</div>
+		</form>
+	</div>
+</div>

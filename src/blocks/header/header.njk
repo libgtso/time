@@ -1,0 +1,43 @@
+{% set header = [
+	{
+		"title": "Мужские",
+		"link": "/"
+	},
+	{
+		"title": "Женские",
+		"link": "/"
+	},
+	{
+		"title": "Интерьерные",
+		"link": "/",
+		"type": "sub"
+	},
+	{
+		"title": "Бренды",
+		"link": "/"
+	}
+]%}
+
+<div class="header">
+	<div class="container">	
+		<a class="header__logo" href="./index.html">
+			<img src="./images/time.png" alt="time66.ru">
+		</a>
+		<div class="header__menu">
+			<ul class="header__menu-list">
+				{% for item in header %}
+					<li class="header__menu-list_item {% if item.type %}list_item-{{item.type}}{% endif %}"><a href="{{item.linl}}">{{item.title}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="header__info">
+			<div class="header__phone">
+				<span class="phone__nmb">8 343 <span class="phone__nmb_bold">201 66 23</span></span>
+			</div>
+			<div class="header__time">
+				<p class="header__time_txt">Время работы:</p>
+				<p class="header__time_bold">10:00-20:00</p>
+			</div>
+		</div>
+	</div>
+</div>

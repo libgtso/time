@@ -1,0 +1,38 @@
+{% set delpay = [
+	{
+		"itemred": "Доставка по Екатеринбургу",
+		"itemblack": "Бесплатно"
+	},
+	{
+		"itemred": "Самовывоз",
+		"itemblack": "Екатеринбург, Радищева,1."
+	},
+	{
+		"itemred": "Оплата",
+		"itemblack": "Наличными, безналичный расчет, банковские карты"
+	}
+]%}
+
+<div class="questdelivery">
+	<div class="container">
+		<div class="questdelivery-text">
+			<div class="questdelivery-text__title">
+				<h3>Интернет-магазин Time66</h3>
+			</div>
+			<p class="questdelivery-text__item">
+				Однажды осенью матушка варила в гостиной медовое варенье а я, облизываясь, смотрел на кипучие пенки. Батюшка у окна читал Придворный Календарь, ежегодно им получаемый. Эта книга имела всегда сильное на него влияние: никогда не перечитывал он ее без особенного участия, и чтение это производило в нем всегда удивительное волнение желчи. Матушка, знавшая наизусть все его свычаи и обычаи, всегда старалась засунуть несчастную книгу как можно подалее, и таким образом Придворный Календарь не попадался ему на глаза иногда по целым месяцам. Зато, когда он случайно его находил, то бывало по целым часам не выпускал уж из своих рук.
+			</p>
+		</div>
+		<div class="questdelivery-list">
+				<h3 class="questdelivery-list__title">Доставка и оплата</h3>
+			<ul class="">
+				{% for item in delpay %}
+					<li class="questdelivery-list__item">
+						<span class="questdelivery-list__item_red">{{item.itemred}}</span>
+						<span class="questdelivery-list__item_black">{{item.itemblack}}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>

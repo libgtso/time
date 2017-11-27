@@ -1,0 +1,14 @@
+{% extends "base/base.njk" %}
+
+{% set title = "Главная" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+	{% include 'hatslider/hatslider.njk' %}
+	{% include 'search/search.njk' %}
+	{% include 'hits/hits.njk' %}
+	{% include 'watch/watch.njk' %}
+	{% include 'brands/brands.njk' %}
+	{% include 'quest/quest.njk' %}
+{% endblock %}

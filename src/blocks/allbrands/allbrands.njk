@@ -1,0 +1,194 @@
+{% set logo = [
+	{
+		"img": "./images/brand1.png",
+		"brnd": "Apella",
+		"txt": "Швейцария",
+		"link": "/",
+		"linktxt": "32 модели",
+		"alt": "Apella"
+	},
+	{
+		"img": "./images/brand2.png",
+		"brnd": "Calvin Klein",
+		"txt": "Австрия",
+		"link": "/",
+		"linktxt": "47 моделей",
+		"alt": "Calvin Klein"
+	},
+	{
+		"img": "./images/brand3.png",
+		"brnd": "Casio",
+		"txt": "Япония",
+		"link": "/",
+		"linktxt": "67 моделей",
+		"alt": "Casio"
+	},
+	{
+		"img": "./images/brand4.png",
+		"brnd": "Skagen",
+		"txt": "Дания",
+		"link": "/",
+		"linktxt": "42 модели",
+		"alt": "Skagen"
+	},
+	{
+		"img": "./images/brand5.png",
+		"brnd": "DKNY",
+		"txt": "США",
+		"link": "/",
+		"linktxt": "32 модели",
+		"alt": "DKNY"
+	},
+	{
+		"img": "./images/brand6.png",
+		"brnd": "Orient",
+		"txt": "Швейцария",
+		"link": "/",
+		"linktxt": "32 модели",
+		"alt": "Orient"
+	},
+	{
+		"img": "./images/brand7.png",
+		"brnd": "Fossil",
+		"txt": "США",
+		"link": "/",
+		"linktxt": "47 моделей",
+		"alt": "Fossil"
+	},
+	{
+		"img": "./images/brand8.png",
+		"brnd": "Atlantic",
+		"txt": "Швейцария",
+		"link": "/",
+		"linktxt": "67 моделей",
+		"alt": "Atlantic"
+	},
+	{
+		"img": "./images/brand9.png",
+		"brnd": "Versace",
+		"txt": "Италия",
+		"link": "/",
+		"linktxt": "42 модели",
+		"alt": "Versace"
+	},
+	{
+		"img": "./images/brand10.png",
+		"brnd": "Timex",
+		"txt": "Австрия",
+		"link": "/",
+		"linktxt": "32 модели",
+		"alt": "Timex"
+	},
+	{
+		"img": "./images/brand1.png",
+		"brnd": "Apella",
+		"txt": "Швейцария",
+		"link": "/",
+		"linktxt": "32 модели",
+		"alt": "Apella"
+	},
+	{
+		"img": "./images/brand2.png",
+		"brnd": "Calvin Klein",
+		"txt": "Австрия",
+		"link": "/",
+		"linktxt": "47 моделей",
+		"alt": "Calvin Klien"
+	},
+	{
+		"img": "./images/brand3.png",
+		"brnd": "Calvin Klein",
+		"txt": "Австрия",
+		"link": "/",
+		"linktxt": "47 моделей",
+		"alt": "Calvin Klien"
+	},
+	{
+		"img": "./images/brand4.png",
+		"brnd": "Calvin Klein",
+		"txt": "Австрия",
+		"link": "/",
+		"linktxt": "47 моделей",
+		"alt": "Calvin Klien"
+	},
+	{
+		"img": "./images/brand5.png",
+		"brnd": "Calvin Klein",
+		"txt": "Австрия",
+		"link": "/",
+		"linktxt": "47 моделей",
+		"alt": "Calvin Klien"
+	}
+]%}
+
+{% set abc = [
+	{
+		"unit": "Все"
+	},
+	{
+		"unit": "A"
+	},
+	{
+		"unit": "C"
+	},
+	{
+		"unit": "E"
+	},
+	{
+		"unit": "F"
+	},
+	{
+		"unit": "G"
+	},
+	{
+		"unit": "K"
+	},
+	{
+		"unit": "L"
+	},
+	{
+		"unit": "P"
+	},
+	{
+		"unit": "S"
+	},
+	{
+		"unit": "T"
+	},
+	{
+		"unit": "V"
+	},
+	{
+		"unit": "Q"
+	},
+	{
+		"unit": "Z"
+	}
+]%}
+
+<div class="allbrands">
+	<div class="container">
+		<div class="allbrands-logo">
+			<h1 class="allbrands-title">Все бренды</h1>
+			<ul class="allbrands-abc">
+				{% for item in abc %}
+					<li class="allbrands-abc__item{% if loop.first %} active_btn{% endif %}">{{item.unit}}</li>
+				{% endfor %}
+			</ul>
+			<ul class="allbrands-list">
+				{% for item in logo %}
+					<li class="allbrands-list__item">
+						<a class="allbrands-list__item-link" href="{{item.link}}">
+							<div class="allbrands-list__pict">
+								<img class="allbrands-list__pict-img" src="{{item.img}}" alt="">
+							</div>
+							<span class="allbrands-list__item-brnd">{{item.brnd}}</span>
+							<span class="allbrands-list__item-txt">{{item.txt}}</span>
+							<span class="allbrands-list__item-txt_under">{{item.linktxt}}</span>					
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>

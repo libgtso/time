@@ -1,0 +1,46 @@
+{% set list = [
+	{
+		"item": "Фэшн",
+		"type": "fashion"
+	},
+	{
+		"item": "Спортивные",
+		"type": "sport"
+	},
+	{
+		"item": "Деловые",
+		"type": "business"
+	},
+	{
+		"item": "Электронные",
+		"type": "elec"
+	},
+	{
+		"item": "Водонепроницаемые",
+		"type": "water"
+	},
+	{
+		"item": "Подарочные",
+		"type": "gift"
+	},
+	{
+		"item": "Детские",
+		"type": "child"
+	}
+]%}
+
+<div class="filter">
+	<div class="filter-title">
+		<h3>Фильтр подбора</h3>
+	</div>
+	<ul class="filter-list">
+		{% for item in list %}
+			<li class="filter-list__item">
+				<label class="filter-list__item-label" for="{{item.type}}">
+					<input class="filter-list__item-input" id="{{item.type}}" type="checkbox"/>
+					<span class="filter-list__item-span">{{item.item}}<i>+</i></span>
+				</label>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

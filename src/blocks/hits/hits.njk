@@ -1,0 +1,62 @@
+{% set hits = [
+	{
+		"img":"./images/watch4.png",
+		"title": "Cover <span>CO182.03</span>",
+		"alt": "Cover CO182.03",
+		"link": "#",
+		"price": "24 690 &#8381",
+		"buy": "Купить"
+	},
+	{
+		"img":"./images/watch3.png",
+		"title": "Casio <span>GA-100BW-1A</span>",
+		"alt": "CCasio GA-100BW-1A",
+		"link": "#",
+		"price": "9 790 &#8381",
+		"buy": "Купить"
+	},
+	{
+		"img":"./images/watch2.png",
+		"title": "Calvin Klein <span>K2G211.C1</span>",
+		"alt": "Calvin Klein K2G211.C1",
+		"link": "#",
+		"price": "12 590 &#8381",
+		"buy": "Купить"
+	},
+	{
+		"img":"./images/watch1.png",
+		"title": "Calvin Klein <span>K4D231.G6</span>",
+		"alt": "Calvin Klein K4D231.G6",
+		"link": "#",
+		"price": "12 590 &#8381",
+		"buy": "Купить"
+	}
+]%}
+
+<div class="hits">
+	<div class="container">
+		<div class="hits__title title">
+			<h1>Хиты продаж</h1>
+			<ul class="hits__type">
+				<li class="active_btn hits__type_item">Все</li>
+				<li class="hits__type_item">Мужские</li>
+				<li class="hits__type_item">Женские</li>
+				<li class="hits__type_item">Интерьерные</li>
+			</ul>
+		</div>
+		<ul class="hits__carousel">
+			{% for item in hits %}
+				<li class="hits__carousel_item">
+					<a class="hits__carousel_item-link" href="{{item.link}}">
+						<img src="{{item.img}}" alt="{{item.alt}}">
+						<div class="hits__price">
+							<span class="hits__price_title">{{item.title}}</span>
+							<span class="hits__price_price">{{item.price}}</span>
+							<span class="button hits__price_button">{{item.buy}}</span>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

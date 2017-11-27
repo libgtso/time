@@ -1,0 +1,74 @@
+.questdelivery {
+	background: @c-white;
+	padding: 40px 0;
+
+	&-text,
+	&-list {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&-text {
+		width: 525px;
+
+		&__title {
+			margin-bottom: 10px;
+		}
+
+		&__item {
+			font-size: 13px;
+			line-height: 1.9;
+		}
+	}
+
+	&-list {
+		margin-left: 200px;
+		width: 240px;
+
+		&__title {
+			margin-left: -85px;
+			margin-bottom: 10px;
+		}
+
+		&__item:first-child,
+		&__item:nth-child(2),
+		&__item:nth-child(3) {
+			position: relative;
+			margin-bottom: 25px;
+		}
+
+		&__item:first-child:before,
+		&__item:nth-child(2):before,
+		&__item:nth-child(3):before {
+			content: '';
+			position: absolute;
+			left: -85px;
+		}
+
+		&__item:first-child:before {
+			background: url(../images/truck.png) 50% 50% no-repeat;
+			width: 51px;
+			height: 36px;
+			top:5px;
+		}
+
+		&__item:nth-child(2):before {
+			top: 0px;
+			width: 46px;
+			height: 47px;
+			background: url(../images/bag.png) 10% 50% no-repeat;
+		}
+
+		&__item:nth-child(3):before {
+			top: 0px;
+			width: 51px;
+			height: 47px;
+			background: url(../images/lopatnik.png) 50% 50% no-repeat;
+		}
+
+		&__item_red {
+			display: block;
+			color: @c-roze;
+		}
+	}
+}

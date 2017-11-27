@@ -1,0 +1,63 @@
+.footer {
+	background:#0f3c49;
+	display: table;
+	width: 100%;
+	padding: 35px 0;
+
+	&__logo,
+	&__link,
+	&__time,
+	&__addr {
+		display: table-cell;
+		color: @c-white;
+	}
+	
+	&__copy,
+	&__link_item,
+	&__time_bold {
+		display: block;
+		color: @c-white;
+	}
+	&__link_item {
+		margin-left: 120px;
+		font-size: 13px;
+		margin-bottom: 15px;
+
+		&:hover {
+			color:@c-link;
+		}
+	}
+
+	&__time_txt,
+	&__time_bold {
+		margin-left: 110px;
+		display: block;
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+
+	&__time_bold {
+		font-weight: bold;
+		font-size: 15px;
+	}
+
+	&__logo_link {
+		margin-bottom: 15px;
+		display: block;
+	}
+}
+
+.footer-phone,
+.footer-location {
+	margin-left: 80px;
+	margin-bottom: 10px;
+}
+
+.footer-location__txt {
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.footer-phone__numb_bold {
+	font-weight: bold;
+}

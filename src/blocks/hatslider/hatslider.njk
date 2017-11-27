@@ -1,0 +1,30 @@
+{% set hatbanner = [
+	{
+		"src": "./images/hatbanner.png",
+		"alt": "Полная_коллекция",
+		"link": "./catalog.html",
+		"cat": "./images/gshock.png",
+		"cat_in": "./images/inner_catalog.png"
+	},
+	{
+		"src": "./images/hatbanner.png",
+		"alt": "Полная_коллекция",
+		"link": "./catalog.html",
+		"cat": "./images/gshock.png",
+		"cat_in": "./images/inner_catalog.png"
+	}
+]%}
+
+<div class="hatslider">
+	{% for item in hatbanner %}
+		<div class="hatslider__item">
+			<img class="hatslider__item_pict" src="{{item.src}}" alt="{{item.alt}}">
+			<div class="hatslider__catalog">
+				<img class="hatslider__catalog_pict" src="{{item.cat}}" alt="">
+				<a class="hatslider__catalog_link" href="{{item.link}}">
+					<img class="hatslider__catalog_pict" src="{{item.cat_in}}" alt="">
+				</a>
+			</div>
+		</div>
+	{% endfor %}
+</div>

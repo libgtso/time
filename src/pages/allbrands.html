@@ -1,0 +1,11 @@
+{% extends "base/base.njk" %}
+
+{% set title = "Все бренды" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+	{% include 'search/search.njk' %}
+	{% include 'allbrands/allbrands.njk' %}
+	{% include 'questdelivery/questdelivery.njk' %}
+{% endblock %}

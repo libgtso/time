@@ -1,0 +1,100 @@
+@import "var";
+
+html, body{
+	height: 100%;
+    background: url(../images/full-resolution-paper-texture.jpg);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 28px;
+}
+
+a{
+    color: @c-link;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+svg{
+    display: block;
+}
+
+.page{
+    color: @c-black;
+    font: 14px/1.7 'Roboto', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none;
+
+    &__container{
+        margin: 0 auto;
+        width: 1100px;
+    }
+
+    &__footer{
+        height: 100px;
+    }
+}
+
+.icon{
+    &-sprite{
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -1000px;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.owl-item {
+    z-index: 999;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+
+.container {
+    padding: 0 55px;
+}
+
+.button,
+.active_btn {
+    background: #f8255b;
+    color: @c-white!important;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.btn-send {
+    background: @c-link;
+    border: none;
+    color: @c-white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

@@ -1,0 +1,49 @@
+{% set watch = [
+	{
+		"img": "./images/watch5.png",
+		"title": "Мужские<br> часы",
+		"link": "/",
+		"alt": "Мужские часы"
+	},
+	{
+		"img": "./images/watch6.png",
+		"title": "Женские<br> часы",
+		"link": "/",
+		"alt": "Женские часы"
+	},
+	{
+		"img": "./images/watch7.png",
+		"title": "Настольные<br> часы",
+		"link": "/",
+		"alt": "Настольные часы"
+	},
+	{
+		"img": "./images/watch8.png",
+		"title": "Настенные<br> часы",
+		"link": "/",
+		"alt": "Настенные часы"
+	},
+	{
+		"img": "./images/watch9.png",
+		"title": "Напольные<br> часы",
+		"link": "/",
+		"alt": "Напольные часы"
+	}
+]%}
+
+<div class="watch">
+	<div class="container">
+		<ul class="watch__list">
+			{% for item in watch %}
+				<li class="watch__list_item">
+					<a class="watch__list_link" href="{{item.link}}">
+						<img class="watch__list_pict" src="{{item.img}}" alt="{{item.alt}}">
+						<div class="watch__title title">
+							{{item.title}}
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

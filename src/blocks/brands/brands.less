@@ -1,0 +1,42 @@
+.brands {
+	background: @c-white;
+	text-align: center;
+	position: relative;
+	padding-top: 10px;
+
+	&:before,
+	&:after {
+		position: absolute;
+		width: 50.3%;
+		content: '';
+		bottom: 0;
+		height: 3px;
+		background: #e2e2e2;
+	}
+
+	&:after {
+		right: 50%;
+		transform: rotate(3deg);
+		box-shadow: 0 2px 5px 1px #e2e2e2;
+	}
+
+	&:before {
+		transform: rotate(357deg);
+		box-shadow: 0 2px 5px 1px #e2e2e2;
+	}
+}
+
+.brands-logo__item {
+	vertical-align: middle;
+	max-width: 140px;
+	max-height: 140px;
+	width: auto;
+	height: auto;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.brands-link {
+	padding: 20px 0;
+	display: block;
+}
