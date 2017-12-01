@@ -1,0 +1,65 @@
+{% set table = [
+	{
+		"name": "Противоударные",
+		"title": "Да",
+		"addclass": "white"
+	},
+	{
+		"name": "Водонепроницаемые",
+		"title": "Есть, WR200 (20 атм)"
+	},
+	{
+		"name": "Материал корпуса",
+		"title": "Нерж. сталь + пластик",
+		"addclass": "white"
+	},
+	{
+		"name": "Материал браслета/ремешка",
+		"title": "Какучук"
+	},
+	{
+		"name": "Стекло",
+		"title": "Минеральное",
+		"addclass": "white"
+	},
+	{
+		"name": "Габариты (ШхВхТ)",
+		"title": "45.9x52.4x16.5 мм"
+	},
+	{
+		"name": "Отображение даты",
+		"title": "Число, день недели",
+		"addclass": "white"
+	},
+	{
+		"name": "Дополнительные функции",
+		"title": "Отображение даты"
+	},
+	{
+		"name": "Подсветка",
+		"title": "Дисплея",
+		"addclass": "white"
+	}
+]%}
+
+<div class="allparams">
+	<span class="allparams-title">
+		Все характеристики
+	</span>
+	<div class="allparams-table column">
+		<table class="allparams-data">
+			{% for item in table %}
+				<tr class="allparams-table_string {% if item.addclass %}allparams-table_string__{{item.addclass}}{% endif %}">
+					<td class="allparams-table_title">{{item.name}}</td>
+					<td>{{item.title}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<div class="allparams-desc column">
+		<img src="./images/casiojshock.png" alt="casiojshock.png">
+		<p>Японский производитель электронных устройств. Корпорация основана в апреле 1946 года в Токио. Наиболее известна как производитель калькуляторов, аудио оборудования, КПК, фотокамер, музыкальных инструментов, планшетов и наручных часов.
+В 1957 году фирма Casio выпустила первый в мире полностью электронный калькулятор (Модель 14-А).</p>
+	<a href="http://www.casio.com">www.casio.com</a>
+	</div>
+</div>

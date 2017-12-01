@@ -5,5 +5,8 @@
 {% block title %}{{h1}}{% endblock %}
 
 {% block content %}
-	
+	{% include 'breadcrumbs/breadcrumbs.njk' %}
+	{% include 'cardunit/cardunit.njk' %}
+	{% include 'allparams/allparams.njk' %}
+	{% include 'quest/quest.njk' %}
 {% endblock %}

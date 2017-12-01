@@ -1,0 +1,147 @@
+.cardunit {
+	background: #fff;
+	padding-left: 50px;
+	margin-top: -10px;
+	box-shadow: 0px 1px 15px 1px #d4d4d4;
+	position: relative;
+
+	&-item {
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+
+	&-img {
+		width: 250px;
+		height: 325px;
+		position: relative;
+
+		& > img {
+			max-width: 250px;
+			max-height: 325px;
+			width: auto;
+			height: auto;
+			display: block;
+			margin: 10px 0;
+		}
+	}
+
+	&-charact {
+		margin-left: 45px;
+		width: 430px;
+		margin-right: 35px;
+	}
+
+	&-txt {
+		margin-bottom: 30px;
+	}
+
+	&-table {
+		padding-bottom: 10px;
+		display: block;
+	}
+
+	&-name {
+		padding-right: 125px!important;
+	}
+
+	&-name,
+	&-title {
+		padding: 5px;
+	}
+
+	&-string__gray {
+		background: #f3f3f3;
+	}
+
+	&-all {
+		font-size: 13px;
+		border-bottom: 1px dotted #000;
+		cursor: pointer;
+	}
+
+	&-list {
+		width: 250px;
+
+		&__item {
+			margin-bottom: 30px!important;
+
+			&_red-left {
+				margin-left: 40px;
+			}
+
+			&:first-child {
+				margin-bottom: 40px!important;
+			}
+		}
+
+		&__item:first-child:before,
+		&__item:nth-child(2):before,
+		&__item:nth-child(3):before {
+			content: '';
+			position: absolute;
+			left: -5px;
+		}
+
+		&__item:first-child:before {
+			background: url(../images/truck.png) 50% 50%;	
+			background-size: cover;
+			width: 31px;
+			height: 22px;
+			top: -25px;
+			left: -1px;
+		}
+
+		&__item:nth-child(2):before {
+			top: -30px;
+			width: 25px;
+			height: 31px;
+			background: url(../images/bag.png) 10% 50%;
+			background-size: cover;
+			left: -1px;
+		}
+
+		&__item:nth-child(3):before {
+			top: -10px;
+			left: -1px;
+			width: 33px;
+			height: 30px;
+			background: url(../images/lopatnik.png) 50% 50%;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+	}
+
+	&-price {
+		margin-bottom: 65px;
+		margin-top: -20px;
+	}
+
+	&-nmb {
+		font-size: 41px;
+		display: block;
+	}
+
+	&-call {
+		display: block;
+		width: 95px;
+		text-align: center;
+		font-size: 22px;
+		display: inline-block;
+	}
+
+	&-sale {
+		display: inline-block;
+		margin-left: 20px;
+		color: #aeaeae;
+		font-size: 22px;
+	}
+}
+
+.plusclick {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}

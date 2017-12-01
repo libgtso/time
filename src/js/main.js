@@ -13,5 +13,10 @@ $(document).ready(function() {
 		nav: true,
 		dots: true,
 		navText: " ",
+		mouseDrag: false
+	});
+	$("a#watch-card").fancybox();
+	$("a#watch-card").fancybox({
+		'hideOnContentClick': true
 	});
 });

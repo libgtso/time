@@ -1,0 +1,85 @@
+{% set table = [
+	{
+		"name": "Тип часов:",
+		"title": "Кварцевые, мужские",
+		"class": "gray"
+	},
+	{
+		"name": "Механизм:",
+		"title": "Электронный CASIO"
+	},
+	{
+		"name": "Корпус:",
+		"title": "Высококачественный пластик",
+		"class": "gray"
+	},
+	{
+		"name": "Браслет:",
+		"title": "Каучук"
+	},
+	{
+		"name": "Стекло:",
+		"title": "Минеральное",
+		"class": "gray"
+	}
+]%}
+
+{% set delpay = [
+	{
+		"itemred": "Доставка по Екатеринбургу",
+		"itemblack": "Бесплатно"
+	},
+	{
+		"itemred": "Самовывоз",
+		"itemblack": "Екатеринбург, Радищева,1."
+	},
+	{
+		"itemred": "Оплата",
+		"itemblack": "Наличными, безналичный расчет, банковские карты",
+		"class": "left"
+	}
+]%}
+
+<div class="cardunit">
+	<h1 class="cardunit-title title">{{h1}}</h1>
+	<div class="cardunit-item">
+		<div class="cardunit-img column">
+			<a id="watch-card" href="./images/cardpict.png">
+			<img class="plusclick" src="../images/plusclick.png" alt="">
+			<img src="./images/cardpict.png" alt="Casio GLS-8900LV-2E"/></a>
+		</div>
+		<div class="cardunit-charact column">
+			<p class="cardunit-txt">
+				Яркие мужские спортивные часы от Louis Vuitton<br>
+				Модель GLS-8900LV-2E произведена из нержавеющей стали
+				и высококачественного пластика черного цвета, а удобный ремешок сделан из каучука.  Дисплей часов надежно защищен минеральным стеклом.  Конструкция часов позволяет находиться с ними под водой на глубине до 200 метров.
+			</p>
+			<table class="cardunit-table" cellpadding="3" border="0">
+				<tbody>
+					{% for item in table %}
+						<tr class="cardunit-string{% if item.class %} cardunit-string__{{item.class}}{% endif %}">
+							<td class="cardunit-name">{{item.name}}</td>
+							<td class="cardunit-title">{{item.title}}</td>					
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<span class="cardunit-all">Все характеристики</span>
+		</div>
+		<div class="cardunit-buy column">
+			<div class="cardunit-price">
+				<span class="cardunit-nmb">24 690 р</span>
+				<span class="button hits__price_button cardunit-call">Купить</span>
+				<span class="cardunit-sale">-20%</span>
+			</div>
+			<ul class="cardunit-list">
+				{% for item in delpay %}
+					<li class="questdelivery-list__item cardunit-list__item">
+						<span class="questdelivery-list__item_red cardunit-list__item_red{% if item.class %} cardunit-list__item_red-{{item.class}}{% endif %}">{{item.itemred}}</span>
+						<span class="questdelivery-list__item_black cardunit-list__item_black">{{item.itemblack}}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
