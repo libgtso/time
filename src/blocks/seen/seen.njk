@@ -1,0 +1,44 @@
+{% set seen = [
+	{
+		'img': './images/watch1.png',
+		'price': '24690 p',
+		'title': 'Cover <span>C0182.03</span>',
+		'link': './'
+	},
+	{
+		'img': './images/watch2.png',
+		'price': '24690 p',
+		'title': 'Cover <span>C0182.03</span>',
+		'link': './'
+	},
+	{
+		'img': './images/watch3.png',
+		'price': '24690 p',
+		'title': 'Cover <span>C0182.03</span>',
+		'link': './'
+	},
+	{
+		'img': './images/watch4.png',
+		'price': '24690 p',
+		'title': 'Cover <span>C0182.03</span>',
+		'link': './'
+	}
+]%}
+
+<div class="seen">
+	<h3 class="seen-title title">Вы недавно смотрели</h3>
+	<ul class="seen-list carousel">
+		{% for item in seen %}
+			<li class="seen-item clearfix">
+				<a class="seen-link" href="./">
+					<div class="seen-img">
+						<img src="{{item.img}}" alt="">
+					</div>
+					<span class="seen-name">{{item.title}}</span>
+					<span class="price seen-price">{{item.price}}</span>
+					<span class="button seen-btn">Купить</span>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
