@@ -1,0 +1,73 @@
+.rightcards {
+	width: 240px;
+	float: right;
+	clear: left;
+	margin-top: 50px;
+}
+
+.rightcards__list {
+	overflow: hidden;
+	margin-left: 12px;
+	padding: 5px;
+		
+		&_item {
+			width: 220px;
+			padding: 30px 0 80px;
+			position: relative;
+			box-shadow: 0 0 3px 3px #e8e8e8;
+			margin-bottom: 45px;
+
+			&-link > img {
+				display: block;
+				margin: 0 auto;
+				max-height: 225px;
+				max-width: 185px;
+				height: auto;
+				width: auto;
+		}
+	}
+}
+.rightcards__price {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	padding-bottom: 10px;
+
+	&_title {
+		text-transform: uppercase;
+		color: @c-black;
+		display: block;
+
+		& > span {
+			color: #959595;
+		}
+	}
+
+	&_price {
+		display: inline-block;
+		color: @c-roze;
+	}
+
+	&_button {
+		display: none;
+	}
+}
+
+.rightcards__list_item:hover {
+
+		& .rightcards__price_button {
+			display: inline-block;
+			position: relative;
+			background-image:
+     		linear-gradient(to top right, transparent 50.5%, #fff 50.5%),
+        linear-gradient(to bottom right, transparent 50.5%, #fff 50.5%);  /* 50.5%, иначе угол будет не острый */
+		background-repeat: repeat-y, repeat-y;
+		background-position: 90px 1px, 90px 1px;  /*  начинаем не с обрезанного угла  */
+		background-size: 5px 5px, 5px 5px;
+	}
+
+	& .rightcards__price_title > span {
+		color: @c-black;
+	}	
+}

@@ -1,0 +1,46 @@
+{% set pict = [
+	{
+		'img': './images/ivan.png'
+	},
+	{
+		'img': './images/ivan.png'
+	},
+	{
+		'img': './images/ivan.png'
+	},
+	{
+		'img': './images/ivan.png'
+	}
+]%}
+
+{% set mincar = [
+	{
+		'img': './images/brand1.png',
+		'alt': 'G-shock'
+	},
+	{
+		'img': './images/ivan.png',
+		'alt': 'G-shock'
+	},
+	{
+		'img': './images/ivan.png',
+		'alt': 'G-shock'
+	},
+	{
+		'img': './images/ivan.png',
+		'alt': 'G-shock'
+	}
+]%}
+
+<div class="minicarousel">
+	{% for item in pict %}
+		<img class="minicarousel-img {% if loop.first %} minicarousel-img_active{% endif %}" src="{{item.img}}" alt="G-shock">
+	{% endfor %}
+	<ul class="minicarousel-list carousel">
+		{% for item in mincar %}
+			<li class="minicarousel-item">
+				<img src="{{item.img}}" alt="{{item.alt}}">
+			</li>
+		{% endfor %}
+	</ul>
+</div>

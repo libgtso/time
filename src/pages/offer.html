@@ -1,0 +1,19 @@
+{% extends "base/base.njk" %}
+
+{% set title = "Предновогодняя распродажа лучших моделей G-shock" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% set breadcrumbs = "Акции магазина" %}
+
+{% block content %}
+	{% include 'hatslider/hatslider.njk' %}
+	{% include 'breadcrumbs/breadcrumbs.njk' %}
+	<div class="offer clearfix">
+		<div class="container">
+			{% include 'rightcards/rightcards.njk' %}
+			{% include 'leftblock/leftblock.njk' %}
+		</div>
+	</div>
+	{% include 'quest/quest.njk' %}
+{% endblock %}

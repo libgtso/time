@@ -1,0 +1,43 @@
+{% set rightcards = [
+	{
+		"img":"./images/watch10.png",
+		"title": "Cover <span>CO182.03</span>",
+		"alt": "Cover CO182.03",
+		"link": "#",
+		"price": "24 690 &#8381",
+		"buy": "Купить"
+	},
+	{
+		"img":"./images/watch12.png",
+		"title": "Casio <span>GA-100BW-1A</span>",
+		"alt": "CCasio GA-100BW-1A",
+		"link": "#",
+		"price": "9 790 &#8381",
+		"buy": "Купить"
+	},
+	{
+		"img":"./images/watch3.png",
+		"title": "Calvin Klein <span>K2G211.C1</span>",
+		"alt": "Calvin Klein K2G211.C1",
+		"link": "#",
+		"price": "12 590 &#8381",
+		"buy": "Купить"
+	}
+]%}
+
+<div class="rightcards">
+	<ul class="rightcards__list">
+		{% for item in rightcards %}
+			<li class="rightcards__list_item">
+				<a class="rightcards__list_item-link" href="{{item.link}}">
+					<img src="{{item.img}}" alt="{{item.alt}}">
+					<div class="rightcards__price">
+						<span class="rightcards__price_title">{{item.title}}</span>
+						<span class="rightcards__price_price">{{item.price}}</span>
+						<span class="button rightcards__price_button">{{item.buy}}</span>
+					</div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

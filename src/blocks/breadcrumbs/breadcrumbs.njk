@@ -1,7 +1,9 @@
-{% set breadcrumbs = "Мужские часы" %}
-
 <div class="breadcrumbs">
-	<span><a class="breadcrumbs-link" href="./">{{breadcrumbs}}</a></span>
+	<span>
+		{% if breadcrumbs %}
+			<a class="breadcrumbs-link" href="./">{{breadcrumbs}}</a>
+		{% endif %}
+	</span>
 	<form class="column search__form breadcrumbs-form" action="">
 		<input type="text" name="" id="search" placeholder="Поиск по каталогу">
 		<div class="loop breadcrumbs-loop">

@@ -30,6 +30,15 @@ $(document).ready(function() {
 		navText: ""
 	});
 
+	$('.minicarousel-list').owlCarousel ({
+		loop: true,
+		items: 4,
+		nav: true,
+		margin:10,
+		mouseDrag: false,
+		navText: ""
+	});
+
 	$("a#watch-card").fancybox();
 	$("a#watch-card").fancybox({
 		'hideOnContentClick': true

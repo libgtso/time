@@ -24,15 +24,13 @@
 </head>
 <body class="page">
   <div class="page__container">
-      {% block header %}
-        {% include 'header/header.njk' %}
-      {% endblock %}
-
+    {% block header %}
+      {% include 'header/header.njk' %}
+    {% endblock %}
       {% block content %}{% endblock %}
-        
-      {% block footer %}
-        {% include 'footer/footer.njk' %}
-      {% endblock %}
+    {% block footer %}
+      {% include 'footer/footer.njk' %}
+    {% endblock %}
   </div>    
     <script type="text/javascript" src="vendor/jquery-1.8.2.min.js"></script>
     {% block script %}{% endblock %}
